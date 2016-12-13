@@ -1,5 +1,5 @@
 # Stacker
-Sketch stack things vertically or horizontally
+Stack things in Sketch vertically or horizontally
 
 
 
