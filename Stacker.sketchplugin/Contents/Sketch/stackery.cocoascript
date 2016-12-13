@@ -1,9 +1,11 @@
 var onStackerY = function(context) {
-  var selection = context.selection;
+var selection = context.selection;
 var doc = context.document
 var value = doc.askForUserInput_initialValue("Space selection vertically by", 5);
 var selectionCount = selection.count();
 var selectedObjects = Array();
+var pageArtboards = doc.currentPage().artboards();
+var artboards = Array();
 
 
 if(selectionCount > 0) {
@@ -22,6 +24,20 @@ if(selectionCount > 0) {
         selectedObjects[i].frame().setY(newY);
     }
   }
+}
+
+else{
+  for(var i=0; i < pageArtboards.count(); i++) {
+        artboards[i] = pageArtboards[i];
+    }
+  artboards.sort(function(a,b){ return a.frame().y() - b.frame().y()});
+
+    for (var i = 0; i < pageArtboards.count(); i++){
+        if (i > 0){
+          newY = artboards[i - 1].frame().maxY() + value.intValue();
+          artboards[i].frame().setY(newY)
+        }
+    }
 }
 
 };
