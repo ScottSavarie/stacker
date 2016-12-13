@@ -1,0 +1,37 @@
+{
+  "author" : "Scott Savarie",
+  "commands" : [
+    {
+      "name": "Stack Horizontal",
+      "identifier": "com.bohemiancoding.sketch.stackx",
+      "shortcut": "ctrl + option + cmd + x",
+      "script": "stackerx.cocoascript",
+      "handlers" : {
+        "run" : "onStackerX"
+      }
+    },
+    {
+      "name": "Stack Vertical",
+      "identifier": "com.bohemiancoding.sketch.stacky",
+      "shortcut": "ctrl + option + cmd + y",
+      "script": "stackery.cocoascript",
+      "handlers" : {
+        "run" : "onStackerY"
+      }
+    }
+
+  ],
+  "menu" : {
+    "items" : [
+      "com.bohemiancoding.sketch.stackx",
+      "com.bohemiancoding.sketch.stacky"
+    ],
+    "title" : "Stacker"
+  },
+  "identifier" : "com.example.sketch.6bc9eb72-4338-4b17-8cc1-2c19cce9f619",
+  "version" : "1.0",
+  "description" : "Stack Selection Vertically or Horizontally",
+  "authorEmail" : "scottsavarie@gmail.com",
+  "name" : "Stacker"
+}
+
