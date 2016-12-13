@@ -1,7 +1,7 @@
 var onStackerX = function(context) {
 var selection = context.selection;
 var doc = context.document
-var value = doc.askForUserInput_initialValue("Space selection vertically by", 5);
+var value = doc.askForUserInput_initialValue("Space things by", 5);
 var selectionCount = selection.count();
 var selectedObjects = Array();
 var pageArtboards = doc.currentPage().artboards();
