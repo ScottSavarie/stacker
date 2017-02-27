@@ -15,6 +15,9 @@ Stack things in Sketch vertically or horizontally
 (ctrl + alt + cmd + y) to stack things vertically
 (ctrl + alt + cmd + x) to stack things horizontally
 
+(shift + ctrl + alt + cmd + y) to stack things vertically with no margin
+(shift + ctrl + alt + cmd + x) to stack things horizontally with no margin
+
 You can do this with our without selection on any layers, artboards, or groups.
 
 
