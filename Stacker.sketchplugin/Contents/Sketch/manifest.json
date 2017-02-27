@@ -10,6 +10,7 @@
         "run" : "onStackerX"
       }
     },
+
     {
       "name": "Stack Vertical",
       "identifier": "com.bohemiancoding.sketch.stacky",
@@ -18,18 +19,40 @@
       "handlers" : {
         "run" : "onStackerY"
       }
+    },
+
+  {
+    "name": "Stack Horizontal Tight",
+    "identifier": "com.bohemiancoding.sketch.stackx-zero",
+    "shortcut": "shift + ctrl + option + cmd + x",
+    "script": "stackerx-zero.cocoascript",
+    "handlers" : {
+      "run" : "onStackerXZero"
+    }
+  },
+
+    {
+      "name": "Stack Vertical Tight",
+      "identifier": "com.bohemiancoding.sketch.stacky-zero",
+      "shortcut": "shift+ ctrl + option + cmd + y",
+      "script": "stackery-zero.cocoascript",
+      "handlers" : {
+        "run" : "onStackerYZero"
+      }
     }
 
   ],
   "menu" : {
     "items" : [
       "com.bohemiancoding.sketch.stackx",
-      "com.bohemiancoding.sketch.stacky"
+      "com.bohemiancoding.sketch.stacky",
+      "com.bohemiancoding.sketch.stackx-zero",
+      "com.bohemiancoding.sketch.stacky-zero"
     ],
     "title" : "Stacker"
   },
   "identifier" : "com.example.sketch.6bc9eb72-4338-4b17-8cc1-2c19cce9f619",
-  "version" : "1.0",
+  "version" : "1.1",
   "description" : "Stack Selection Vertically or Horizontally",
   "authorEmail" : "scottsavarie@gmail.com",
   "name" : "Stacker"

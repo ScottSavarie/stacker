@@ -1,0 +1,42 @@
+var onStackerXZero = function(context) {
+var selection = context.selection;
+var doc = context.document
+var selectionCount = selection.count();
+var selectedObjects = Array();
+var pageArtboards = doc.currentPage().artboards();
+var artboards = Array();
+
+
+if(selectionCount > 0) {
+  for(var i=0; i < selectionCount; i++) {
+      selectedObjects[i] = context.selection[i];
+  }
+
+  selectedObjects.sort(function(a,b){ return a.frame().y() - b.frame().y()});
+
+
+  for (var i = 0; i < selectionCount; i++){
+   if(i > 0){
+        newX = selectedObjects[i - 1].frame().maxX();
+        selectedObjects[i].frame().setX(newX);
+    }
+  }
+}
+
+else{
+  for(var i=0; i < pageArtboards.count(); i++) {
+        artboards[i] = pageArtboards[i];
+    }
+  artboards.sort(function(a,b){ return a.frame().x() - b.frame().x()});
+
+    for (var i = 0; i < pageArtboards.count(); i++){
+        if (i > 0){
+          newX = artboards[i - 1].frame().maxX();
+          artboards[i].frame().setX(newX)
+        }
+    }
+}
+
+
+
+};
